@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+    color: white;
+    font-family: 'Ubuntu';
+}
+
+
+
+.x {
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
+  }
+
+  .topicButtons{
+    border-radius: 10%;
+    border: solid 1px white;
+    padding: 15px 15px 15px 15px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.075);
+    transition: all 0.2s;
+  }
+
+  .topicButtons:hover{
+    background: rgba(255, 255, 255, 0.205);
+  }
+
+  .topicButtons:active{
+    background: rgba(255, 255, 255, 0.548);
+  }
+
+.pageContainer{
+    margin: 0 auto;
+    width: 75%;
+    height: 750px;
+    
+}
+
+#userInput{
+    
+}
+
+  input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: white solid 2px;
+    font-size: 16px;
+    background-color: rgb(252, 252, 252);
+    background-image: url("../images/search.png");
+    background-size: 20px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    color: rgb(0, 0, 0);
+    outline:none;
+    
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+#imageArea{
+    margin-top: 50px;
+    width: 100%;
+    height: 75%;
+    margin-left: -25px;
+
+}
+
+.buttonWrapper{
+    width: 100%;
+    height: 20%;
+    margin-left: -20px;
+}
+
+.img{
+    margin-left: 25px;
+    margin-top: 25px;
+}

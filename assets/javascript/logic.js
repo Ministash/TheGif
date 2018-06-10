@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 
 
 var topics = ["batman", "superman", "green lantern", "wonder woman", "the flash", "aquaman", "bruce wayne", "tony stark", "ironman", "hulk"];
@@ -46,35 +46,53 @@ $(".topicButtons").on("click", function(){
 
         
      var groupGifUrl = response.data;
-        
+
      
      for(i = 0; i < groupGifUrl.length; i++){
          
          var imageTag = $("<img>");
-         
-         if(running === true){
-             imageTag.attr("src", groupGifUrl[i].images.original.url);
-            }else{
-                imageTag.attr("src", groupGifUrl[i].images.original_still.url);
-            }
-            imageTag.attr("width", "200");
-            imageTag.attr("height", "200");
-            imageTag.attr("class", "img");
-            
+
+            imageTag.attr(
+                {
+                    "width": "200",
+                    "height": "200",
+                    "class": "img",
+                    "src": groupGifUrl[i].images.original_still.url,
+                    "data-still": groupGifUrl[i].images.original_still.url,
+                    "data-animate": groupGifUrl[i].images.original.url,
+                    "data-state" : "still"
+
+                }
+            );
+
             $("#imageArea").append(imageTag);
         }
+            
+        var state = $(".img").attr("data-state");
+
+            $(".img").on("click", function(){
+                if (state === "still") {
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                  } else {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+            } 
+        });
+            
+            
+
         
-        $(".img").on("click", function(){
-            running = true;
-            console.log(running);
-          });
+             
+            
+            // console.log(imageTag, "src");
+
+        
+        
 
       })
-
-
-      
-    // });
-
+ 
+    });
 
 
 
@@ -85,6 +103,5 @@ $(".topicButtons").on("click", function(){
 
 
 
-      
 
     });

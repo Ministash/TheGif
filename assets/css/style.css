@@ -2,7 +2,7 @@
 
 body{
     background-image: url("../images/background.jpg");
-    background-size: 100%;
+    background-size: 101%;
     color: white;
     font-family: 'Ubuntu';
 }
@@ -43,9 +43,6 @@ body{
     
 }
 
-#userInput{
-    
-}
 
   input[type=text] {
     width: 200px;

@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-body{
-    background-image: url("../images/background.jpg");
-    background-size: 101%;
+
+
+
+html{
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: white;
     font-family: 'Ubuntu';
 }
-
 
 
 .x {
@@ -17,6 +22,7 @@ body{
   }
 
   .topicButtons{
+    display: block;
     border-radius: 10%;
     border: solid 1px white;
     padding: 15px 15px 15px 15px;
@@ -39,9 +45,29 @@ body{
 .pageContainer{
     margin: 0 auto;
     width: 75%;
-    height: 750px;
+    height: 100vh;
     
 }
+
+.topicButtons2{
+    border-radius: 10%;
+    border: solid 1px white;
+    padding: 15px 15px 15px 15px;
+    float: left;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #6965c280;
+    transition: all 0.2s;
+  }
+
+  .topicButtons2:hover{
+    background: #25207cfd;
+  }
+
+  .topicButtons2:active{
+    background: rgba(255, 255, 255, 0.548);
+  }
+
 
 
   input[type=text] {
@@ -66,21 +92,38 @@ input[type=text]:focus {
     width: 100%;
 }
 
-#imageArea{
-    margin-top: 50px;
-    width: 100%;
-    height: 75%;
-    margin-left: -25px;
-
+.imageArea{
+    margin-top: 10%;
+    width: 100%;    
+    height: 100%;
+    margin-left: -40px;
+    background:none;
+   
 }
 
-.buttonWrapper{
-    width: 100%;
-    height: 20%;
+#buttonWrapper{
+    display:block;
+    min-height:  300px; 
     margin-left: -20px;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    background: red;
+
 }
+
 
 .img{
-    margin-left: 25px;
-    margin-top: 25px;
+    margin-top: 15px;
+    
+}
+
+.rating{
+    margin-top: 30px;
+    text-align: center;
+    float: left;
+    margin-left: 31px;
+    height: 250x;
+    width: 250px;
+
+
 }

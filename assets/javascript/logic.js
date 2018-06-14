@@ -39,16 +39,16 @@ function buttonClick() {
 
         var groupGifUrl = response.data;
         imgCreator(groupGifUrl);
-        
+
     });
-    
+
 }
 
 
 //This is where the gifs are created and given attributes. Also this is where I store my onclick function for pausing or starting them.
 function imgCreator(groupGifUrl) {
     for (i = 0; i < groupGifUrl.length; i++) {
-        
+
         var rating = groupGifUrl[i].rating;
         var thingImage = $("<img>");
         var p = $("<div>").text("Rating: " + rating).attr("class", "rating");
@@ -98,5 +98,21 @@ $("#submit").on("click", function (event) {
 
 
 })
+
+
+$("#userInput").keypress(function (event) {
+    if (event.which == 13 || event.keyCode == 13) {
+        event.preventDefault();
+        var newButtonItem = $("#userInput").val().trim();
+        console.log(topics);
+        topics.push(newButtonItem);
+        buttonMaker();
+
+    }
+
+})
+
+
+
 
 $(document).on("click", ".topicButtons", buttonClick);

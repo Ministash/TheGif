@@ -43,7 +43,7 @@ html{
   }
 
 .pageContainer{
-    margin: 0 auto;
+    margin-left: 200px;
     width: 75%;
     height: 100vh;
     
@@ -70,7 +70,8 @@ html{
 
 
 
-  input[type=text] {
+  #userInput[type=text] {
+    margin-top: 3px;
     width: 200px;
     box-sizing: border-box;
     border: white solid 2px;
@@ -84,11 +85,10 @@ html{
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     color: rgb(0, 0, 0);
-    outline:none;
-    
+    outline:none; 
 }
 
-input[type=text]:focus {
+#userInput[type=text]:focus {
     width: 100%;
 }
 
@@ -133,3 +133,38 @@ input[type=text]:focus {
 
 
 }
+
+#sideBar{
+    background: rgba(43, 43, 43, 0.486);
+    height: 500px;
+    width: 150px;
+    border: 2px solid rgba(83, 46, 83, 0.404);
+    position: absolute;
+    top: -38px;
+    right: 88%;
+    margin-top: 50px;
+    
+}
+
+#anotherOne{
+    margin-left: 40px;
+}
+
+#weTheBestMusic{
+    margin-left: 20px;
+}
+
+.borderStuff{
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.685);
+
+
+}
+
+#numberOfGifs{
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+

@@ -1,6 +1,7 @@
 var topics = ["batman", "superman", "green lantern", "wonder woman", "the flash", "aquaman", "bruce wayne", "tony stark", "ironman", "hulk"];
 var gifUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=dc6zaTOxFJmzC&limit=10";
 var gif;
+var gifAmount = 1;
 buttonMaker();
 
 console.log(gifUrl);
@@ -28,7 +29,7 @@ function buttonClick() {
     $(".imageArea").html("");
     gif = $(this).attr("id");
     console.log(gif);
-    gifUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=dc6zaTOxFJmzC&limit=10";
+    gifUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=dc6zaTOxFJmzC&limit=" + gifAmount;
     console.log(gifUrl);
 
     //this is also where I store the API data for the gifs displayed in imageArea. I call on my imgCreator to actually create the gifs.
@@ -112,7 +113,24 @@ $("#userInput").keypress(function (event) {
 
 })
 
+$("#anotherOne").on("click", function(){
+    if (gifAmount < 25){
+    gifAmount++;
+    $("#numberOfGifs").html(gifAmount);
+    console.log(gifAmount);
+    }else{
+        gifAmount = 25;
+    }
+})
 
+$("#weTheBestMusic").on("click", function(){
+    if(gifAmount > 1){
+    gifAmount--;
+    $("#numberOfGifs").html(gifAmount);
+    }else{
+        gifAmount = 1;
+    }
+})
 
 
 $(document).on("click", ".topicButtons", buttonClick);
